@@ -1,6 +1,6 @@
 resource_group_name     = "MilaIgcontactsrg"
 resource_group_location = "West Europe"
-app_service_plan_name   = "milaig-contacts-plan"
+app_service_plan_name   = "milaig-contacts-plan1"
 app_service_name        = "milaig-contacts"
 sql_server_name         = "milaig-contacts-sql"
 sql_database_name       = "milaigcontactsDB"
