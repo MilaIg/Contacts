@@ -9,7 +9,7 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "MilaIgcontactsrg"
     storage_account_name = "milaigcontactssa"
-    container_name       = "MilaIgcotainer"
+    container_name       = "milaIgcotainer1"
     key                  = "terraform.tfstate"
   }
 }
@@ -51,7 +51,8 @@ resource "azurerm_linux_web_app" "appservice" {
   connection_string {
     name  = "DefaultConnection"
     type  = "SQLAzure"
-    value = "Data Source=tcp:${azurerm_mssql_server.sqlserver.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.sql.name};User ID=${azurerm_mssql_server.sqlserver.administrator_login};Password=${azurerm_mssql_server.sqlserver.administrator_login_password};Trusted_Connection=False;MultipleActiveResultSets=True;"
+    value = "Data Source=tcp:${azurerm_mssql_server.sqlserver.fully_qualified_domain_name},1433;Initial Catalog=${azurerm_mssql_database.sql.name};User ID=${azurerm_mssql_server.sqlserver.administ
+    rator_login};Password=${azurerm_mssql_server.sqlserver.administrator_login_password};Trusted_Connection=False;MultipleActiveResultSets=True;"
   }
 }
 resource "azurerm_app_service_source_control" "git" {
